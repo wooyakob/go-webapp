@@ -1,0 +1,66 @@
+{
+  "clusterUUID": "b37a5153c31f022785b6254207fdab75",
+  "autoFailover": {
+    "enabled": true,
+    "timeout": 120
+  },
+  "autoReprovision": {
+    "enabled": true,
+    "max_nodes": 1,
+    "count": 0
+  },
+  "orchestrator": "ns_1@127.0.0.1",
+  "master": "ns_1@127.0.0.1",
+  "isBalanced": true,
+  "quotaInfo": {
+    "memoryQuota": 2000,
+    "queryMemoryQuota": 500,
+    "indexMemoryQuota": 500,
+    "ftsMemoryQuota": 500,
+    "cbasMemoryQuota": 1024,
+    "eventingMemoryQuota": 256
+  },
+  "clusterCompatVersion": "8.0",
+  "clientCertAuthState": "disable",
+  "buckets": {
+    "couchbase": {
+      "travel-sample": {
+        "numReplicas": 0,
+        "evictionPolicy": "full_eviction",
+        "ramQuota": 209715200
+      }
+    }
+  },
+  "nodes": [
+    {
+      "clusterMembership": "active",
+      "status": "healthy",
+      "hostname": "172.18.0.2:8091",
+      "nodeUUID": "a8ff02cb8a9718a3603e713c1221d666",
+      "version": "8.0.0-3777-enterprise",
+      "os": "aarch64-unknown-linux-gnu",
+      "cpuCount": 8,
+      "services": [
+        "backup",
+        "cbas",
+        "eventing",
+        "fts",
+        "index",
+        "kv",
+        "n1ql"
+      ],
+      "uptime": "4539",
+      "memoryTotal": 8218185728,
+      "memoryFree": 4968132608,
+      "swapTotal": 1073737728,
+      "swapUsed": 0,
+      "storageConf": {
+        "dbPath": "/opt/couchbase/var/lib/couchbase/data",
+        "indexPath": "/opt/couchbase/var/lib/couchbase/data",
+        "cbasDirs": [
+          "/opt/couchbase/var/lib/couchbase/data"
+        ]
+      }
+    }
+  ]
+}

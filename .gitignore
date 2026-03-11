@@ -1,0 +1,5 @@
+.env
+venv
+certificate
+root-certificate.txt
+node-certificate.txt

@@ -1,0 +1,24 @@
+services:
+  couchbase:
+    image: couchbase@sha256:f3ada4cdd0b2c43d1687f9c992f271e450e30dcc355a9eab483f37fb24fd2ce0
+    platform: linux/arm64/v8
+    container_name: couchbase
+    hostname: couchbase
+    ports:
+      - "8091-8096:8091-8096"
+      - "11210:11210"
+    volumes:
+      - cbdata:/opt/couchbase/var
+    ulimits:
+      nofile:
+        soft: 40960
+        hard: 40960
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8091/ui/index.html"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+
+volumes:
+  cbdata:
